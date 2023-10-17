@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../stylesheets/nav.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
     <link rel="stylesheet" href="../stylesheets/register.css">
     <title>Register - profileApp</title>
 </head>
@@ -16,20 +17,27 @@
         <?php require 'partials/nav.php'; ?>
     </header>
     <main>
-        <form action="../functions/register.php" method="post"  class="registerForm">
-            <input type="text" placeholder="Enter your first name." name="first_name" id="first_name" value="" required>
-            <input type="text" placeholder="Enter your name's insertion." name="insertion" id="insertion" value="">
-            <input type="text" placeholder="Enter your last name." name="last_name" id="last_name" value="" required>
-            <input type="text" placeholder="Enter your unique username." name="username" id="username" value="" required>
-            <input type="email" placeholder="Enter your email adress." name="e-mail" id="e-mail" value="" required>
-            <input type="password" placeholder="Enter your password" name="password" id="password" value="" required>
-            <input type="password" placeholder="Re-enter your password" name="confirm_password" id="confirm_password" value="" required>
-            <input type="date" placeholder="Please enter your date of birth" name="date_of_birth" id="date_of_birth" value="" required>
-            <input type="submit" name="create_account" id="create_account" value="Create Account">
-        </form>
+        <div class="registerContainer">
+            <div class="centerText">
+                <h1>Create your Profielplus account</h1>
+            </div>
+            <form action="../functions/register.php" method="post"  class="registerForm">
+                <input type="text" placeholder="Enter your first name." name="first_name" id="first_name" class="registerField" value="" required>
+                <input type="text" placeholder="Enter your name's insertion." name="insertion" id="insertion" class="registerField" value="">
+                <input type="text" placeholder="Enter your last name." name="last_name" id="last_name" class="registerField" value="" required>
+                <input type="text" placeholder="Enter your unique username." name="username" id="username" class="registerField" value="" required>
+                <input type="email" placeholder="Enter your email adress." name="e-mail" id="e-mail" class="registerField" value="" required>
+                <input type="password" placeholder="Enter your password" name="password" id="password" class="registerField" value="" required>
+                <input type="password" placeholder="Re-enter your password" name="confirm_password" id="confirm_password" class="registerField" value="" required>
+                <input type="date" placeholder="Please enter your date of birth" name="date_of_birth" id="date_of_birth" class="registerField" value="" required>
+                <input type="submit" name="create_account" id="create_account" class="registerButton" value="Create Account">
+            </form>
+        </div>
     </main>
     <footer>
-        <p>&copy; Team PSR 2023</p>
+        <div class="footerText">
+            <p>&copy; Team PSR 2023</p>
+        </div>
     </footer>
 </body>
 </html>

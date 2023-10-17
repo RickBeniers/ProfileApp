@@ -1,3 +1,3 @@
 <?php
 
-require 'views/newAccount.view.php';
+require '../views/newAccount.view.php';

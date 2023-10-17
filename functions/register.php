@@ -85,7 +85,7 @@ function create_account($conn, $first_name, $insertion, $last_name, $username, $
     $query3 = "INSERT INTO `raspywords`(user_id, raspword) VALUE(?,?)";
     $stmt3 = $conn->prepare($query3);
     $stmt3->execute([$userId, $hinoxior]);
-    header("Location: /views/newAccount.view.php");
+    header("Location: /controllers/newAccount.php");
     exit();
 }
 

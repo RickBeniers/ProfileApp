@@ -1,10 +1,59 @@
+/*Mobile/Generic styling*/
+.registerContainer {
+    background-color: darkgray;
+    margin: 15px 0;
+}
 
+.centerText {
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
 
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.registerField {
+    width: 200px;
+    height: 30px;
+}
+
+.registerButton {
+    width: 200px;
+    height: 30px;
+}
 
 @media only screen and (min-width: 768px) {
+    .registerForm {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+    }
 
+    .registerField {
+        width: 300px;
+        height: 45px;
+    }
+    .registerButton {
+        grid-column: 1 / span 2;
+        grid-row: 5;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
+    .registerField {
+        width: 400px;
+        height: 60px;
+    }
 
+    .registerButton {
+        width: 300px;
+        height: 45px;
+    }
 }
