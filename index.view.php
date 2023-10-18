@@ -1,6 +1,6 @@
 <?php
-include_once 'index.header.php';
 include_once 'indexFunctions.php';
+include_once 'index.header.php';
 echo '
 <main>
     <div class="indexViewMain">

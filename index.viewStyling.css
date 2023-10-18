@@ -1,0 +1,61 @@
+main{
+    height: 90%;
+    width: 100%;
+    border: solid black 1px;
+}
+header{
+    height: 50px;
+    width: 100%;
+    border: solid black 1px;
+}
+a{
+    text-decoration: none;
+}
+.grid-container{
+    display: flex;
+    column-gap: 10px;
+}
+footer{
+    height: 50px;
+    width: 100%;
+    border: solid black 1px;
+}
+.pageButtons{
+    float: right;
+    margin-right: 10px;
+}
+.pageTitle{
+    float: left;
+}
+.Button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    border: solid black 1px;
+    text-align: center;
+    line-height: 25px;
+}
+#hTagTitle{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 30px;
+    width: 300px;
+}
+.indexViewRight{
+    height: 98%;
+    width: 25%;
+    border: solid black 1px;
+    float: right;
+    margin: 10px;
+    overflow-y: scroll;
+}
+.indexViewLeft{
+    height: 98%;
+    width: 70%;
+    border: solid black 1px;
+    float: left;
+    margin: 10px;
+    overflow-y: scroll;
+}
