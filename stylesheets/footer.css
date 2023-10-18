@@ -3,5 +3,11 @@ footer {
     bottom: 0;
     left: 0;
     background-color: darkgray;
-    padding: 20px 0 20px 10px;
+    padding: 11px 0 11px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        padding: 31px 0 31px 10px;
+    }
 }
