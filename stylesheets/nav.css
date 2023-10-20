@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgray;
+    position: sticky;
+    height: 40px;
+    padding: 15px;
+}
+
+.navButton {
+    margin: 0 3px;
+    border: black 1px solid;
+    padding: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+    a {
+        font-size: larger;
+    }
+    .navbar {
+        height: 80px;
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    a {
+        font-size: xx-large;
+    }
+    .navbar {
+        padding: 15px;
+    }
+}
