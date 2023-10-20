@@ -12,7 +12,7 @@ $email = "";
 $hinoxior = "";
 $DOB = date_create();
 
-if (isset($_POST["create_account"])) {
+if (isset($_POST["create_account"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     if (strlen($_POST["first_name"]) <= 0) {
         $error .= "first name is empty, <br>";
     } elseif (strlen($_POST["first_name"]) > 64) {
@@ -63,6 +63,9 @@ if (isset($_POST["create_account"])) {
     check_email($error, $email);
     check_hinoxior($error, $hinoxior);
     check_dob($error, $DOB);*/
+} else {
+    header("Location: /controllers/register.php");
+    exit();
 }
 
 if (!empty($error)) {
