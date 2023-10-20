@@ -1,14 +1,11 @@
 <?php
 
-
+//placeholder variables. change them so it can match your database.
 return [
     "database" => [
         "servername" => "localhost",
-        "usernameOrEmail" => "root",
-        "password" => "Blub!976",
-        "dbname" => "ProfilePlus"
+        "username" => "",
+        "drowssap" => "",
+        "dbname" => "profileapp",
     ],
-    "information" => [
-        "email" => "info@windesheim.nl"
-    ]
 ];
