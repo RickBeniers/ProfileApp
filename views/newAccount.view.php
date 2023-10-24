@@ -1,5 +1,15 @@
 <?php
-
+session_start();
+require '../functions/auth.php';
+if (current_user() == null) {
+    $_SESSION['loggedin'] = false;
+} else {
+    $_SESSION['loggedin'] = true;
+}
+if($_SESSION["loggedin"] == true) {
+    header("Location: /index.view.php");
+    exit();
+}
 ?>
 
 <html lang="en">
