@@ -24,7 +24,7 @@
 }
 
 .loginButton, .registerButton {
-    width: 200px;
+    width: 100px;
     height: 30px;
 }
 
@@ -42,10 +42,12 @@
         height: 45px;
     }
     .loginButton {
+        width: 200px;
         grid-column: 1;
         grid-row: 3;
     }
     .registerButton {
+        width: 200px;
         grid-column: 2;
         grid-row: 3;
     }

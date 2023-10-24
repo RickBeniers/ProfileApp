@@ -6,10 +6,10 @@ if (current_user() == null) {
 } else {
     $_SESSION['loggedin'] = true;
 }
-if($_SESSION["loggedin"] == true) {
+/*if($_SESSION["loggedin"] == true) {
     header("Location: /index.view.php");
     exit();
-}
+}*/
 ?>
 
 <!DOCTYPE html>
