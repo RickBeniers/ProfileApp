@@ -1,34 +1,26 @@
 
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verbind met de database (vervang de databasegegevens door de juiste gegevens).
-    $conn = new mysqli("localhost", "username", "password", "database");
+// Controleer of de gebruiker is ingelogd
 
-    if ($conn->connect_error) {
-        die("Databaseverbinding mislukt: " . $conn->connect_error);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Verwerk het formulier voor het bijwerken van de gebruikersgegevens
+    $firstname = $_POST['firstname'];
+    // Verwerk andere velden hier
+
+    // Upload profielfoto
+    if (isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] === UPLOAD_ERR_OK) {
+        $target_dir = "profile_images/";
+        $target_file = $target_dir . basename($_FILES['profile_image']['name']);
+        move_uploaded_file($_FILES['profile_image']['tmp_name'], $target_file);
+        // Sla het pad naar de profielfoto op in de database
     }
 
-    $user_id = $_SESSION['user_id'];
-    $portfolio_info = $_POST['portfolio_info'];
+    // Update de database met de nieuwe gegevens
+    // Voeg code toe om de andere gegevens in de database bij te werken
 
-    // Bijwerken van de portfolio-informatie in de database.
-    $sql = "UPDATE users SET portfolio_info = ? WHERE id = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $portfolio_info, $user_id);
-
-    if ($stmt->execute()) {
-        header("Location: profile.php");
-    } else {
-        echo "Fout bij het bijwerken van de portfolio-informatie.";
-    }
-
-    $stmt->close();
-    $conn->close();
+    header("Location: portfolio.php");
+    exit();
 }
 ?>

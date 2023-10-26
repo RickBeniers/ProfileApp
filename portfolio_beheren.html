@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Portfolio Aanpassen</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<form action="update_profile.php" method="post">
-    <label for="portfolio_info">Portfolio Informatie:</label>
-    <textarea name="portfolio_info" id="portfolio_info"></textarea>
+<h1>Welkom, Gebruiker Naam!</h1>
+
+<form action="update_profile.php" method="post" enctype="multipart/form-data">
+    <label for="firstname">Voornaam:</label>
+    <input type="text" name="firstname" value="Gebruiker Voornaam">
+    <!-- Voeg hier de andere velden toe zoals middlename, lastname, enz. -->
+    <label for="profile_image">Profielfoto:</label>
+    <input type="file" name="profile_image">
     <input type="submit" value="Opslaan">
 </form>
-<a href="logout.php">Uitloggen</a>
+
+<h2>Hobby's:</h2>
+<!-- Voeg hier de hobby's van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+
+<h2>Werkervaringen:</h2>
+<!-- Voeg hier de werkervaringen van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+
+<h2>Schoolprestaties:</h2>
+<!-- Voeg hier de schoolprestaties van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+
+<h2>Vakken die worden gevolgd:</h2>
+<!-- Voeg hier de vakken toe die de gebruiker volgt -->
 </body>
 </html>
