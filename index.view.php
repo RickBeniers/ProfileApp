@@ -5,13 +5,9 @@ echo '
 <main>
     <div class="indexViewMain">
         <div class="indexViewLeft" >
-            <div class="upperInfoDiv" >
-                <div class="image" ></div>
-                <div class="infoLines"></div>
-            </div>
-            <div class="lowerInfoDiv"></div>
+        '; generateProfileContent(); echo'
         </div>
-        <div class="indexViewRight" >';
+        <div class="indexViewRight flex-containerIII" >';
             generateProfileList(); echo'
         </div>
     </div>

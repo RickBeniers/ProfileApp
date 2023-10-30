@@ -11,9 +11,21 @@ header{
 a{
     text-decoration: none;
 }
-.grid-container{
+.flex-container{
     display: flex;
     column-gap: 10px;
+    flex-direction: row;
+}
+.flex-containerII{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+}
+.flex-containerIII{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 footer{
     height: 50px;
@@ -58,4 +70,50 @@ footer{
     float: left;
     margin: 10px;
     overflow-y: scroll;
+}
+.upperInfoDiv{
+    height: 30%;
+    border: solid black 1px;
+}
+.lowerInfoDiv{
+    height: 60%;
+    border: solid black 1px;
+}
+.image{
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+.image img{
+    border: solid red 1px;
+    height: 99%;
+    width: 99%;
+}
+.infoLines{
+    height: 100%;
+    width: 60%;
+    float: right;
+}
+.textField{
+    height: 8%;
+    width: 95%;
+    border: solid black 1px;
+}
+#item1{
+    order: 1;
+}
+#item2{
+    order: 2;
+}
+#item3{
+    order: 3;
+}
+#item4{
+    order: 4;
+}
+.profileList-item{
+    width: 95%;
+    height: 10%;
+    border: solid black 1px;
+    margin: 2%;
 }
