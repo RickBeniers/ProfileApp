@@ -1,0 +1,90 @@
+h2 {
+    text-align: center;
+}
+
+.settingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    align-self: flex-start;
+}
+
+.editInputFields {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.settingsField {
+    width: 200px;
+    height: 30px;
+}
+
+.editButton {
+    align-self: flex-end;
+    height: 30px;
+    padding: 5px;
+}
+
+.linkButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.editPassButton {
+    width: 268px;
+    margin: 20px auto;
+    border: black 1px solid;
+    padding: 2px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .editInputFields {
+        gap: 10px;
+    }
+
+    .settingsField {
+        width: 300px;
+        height: 30px;
+    }
+
+    .editButton {
+        height: 30px;
+    }
+
+    .editPassButton {
+        width: 368px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .settingsContainer {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .editButton {
+        height: 30px;
+        padding: 5px;
+    }
+
+    .editPassButton {
+        width: 755px;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
