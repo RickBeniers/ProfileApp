@@ -18,10 +18,6 @@
 <h1>Welkom Bij de pagina waar je je portfolio kan aanpassen.</h1>
 
 <form action="update_profile.php" method="post" enctype="multipart/form-data">
-    <label for="first_name">Voornaam:</label>
-
-    <input type="text" name="firstname" value="Gebruiker Voornaam">
-    <!-- Voeg hier de andere velden toe zoals middlename, lastname, enz. -->
     <label for="profile_image">Profielfoto:</label>
     <input type="file" name="profile_image">
     <input type="submit" value="Opslaan">
@@ -32,6 +28,11 @@
 <div id="hobbies">
     <input type="text" name="hobby[]">
     <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg hobby toe</button>
+    <label for="profile_image">Hobbyfoto:</label>
+    <input type="file" name="profile_image">
+    <input type="submit" value="Opslaan">
+    <input type="">
+
 </div>
 
 <h2>Werkervaringen:</h2>
