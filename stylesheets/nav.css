@@ -14,18 +14,26 @@ a {
     align-items: center;
     background-color: darkgray;
     position: sticky;
-    height: 40px;
+    height: 80px;
     padding: 15px;
 }
 
+.navButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .navButton {
-    margin: 0 3px;
+    font-size: small;
+    margin: 0 1px;
     border: black 1px solid;
-    padding: 3px;
+    padding: 2px;
 }
 
 @media only screen and (min-width: 768px) {
-    a {
+    .navButton {
+        margin: 0 3px;
         font-size: larger;
     }
     .navbar {
@@ -35,7 +43,7 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-    a {
+    .navButton {
         font-size: xx-large;
     }
     .navbar {
