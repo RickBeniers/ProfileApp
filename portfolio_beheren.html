@@ -3,6 +3,15 @@
 <head>
     <title>Portfolio Aanpassen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function addField(containerId, inputName) {
+            const container = document.getElementById(containerId);
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = inputName;
+            container.appendChild(input);
+        }
+    </script>
 </head>
 <body>
 <h1>Welkom Bij de pagina waar je je portfolio kan aanpassen.</h1>
