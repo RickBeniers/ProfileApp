@@ -27,6 +27,16 @@ a{
     flex-direction: column;
     row-gap: 10px;
 }
+.flex-containerIV{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+}
+.flex-containerV{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
 footer{
     height: 50px;
     width: 100%;
@@ -76,7 +86,7 @@ footer{
     border: solid black 1px;
 }
 .lowerInfoDiv{
-    height: 60%;
+    height: 70%;
     border: solid black 1px;
 }
 .image{
@@ -98,6 +108,14 @@ footer{
     height: 8%;
     width: 95%;
     border: solid black 1px;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+}
+.text{
+    height: 5%;
+    width: 95%;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
 }
 #item1{
     order: 1;
@@ -111,9 +129,69 @@ footer{
 #item4{
     order: 4;
 }
+#item5{
+    order: 5;
+}
+#item6{
+    order: 6;
+}
+#item7{
+    order: 7;
+}
+#item8{
+    order: 8;
+}
 .profileList-item{
     width: 95%;
     height: 10%;
     border: solid black 1px;
     margin: 2%;
+}
+.profileList-item-left{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.profileCardImage{
+    height: 90%;
+    width: 90%;
+    border: solid black 1px;
+    margin: 5px;
+}
+.profileList-item-right{
+    height: 100%;
+    width: 60%;
+    float: right;
+    justify-content: center;
+}
+.profileCard-text{
+    height: 20px;
+    width: 90%;
+    margin: 0px 0px 0px 5%;
+}
+.midSection{
+    height: 10%;
+    width: 100%;
+    border: solid black 1px;
+}
+.lowerSection{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+.flexV-item{
+    border: solid black 1px;
+    width: 95%;
+    height: 200px;
+    margin: 0px 0px 0px 2%;
+}
+.contentCard-left{
+    height: 100%;
+    width: 30%;
+    float: left;
+}
+.contentCard-right{
+    height: 100%;
+    width: 70%;
+    float: right;
 }
