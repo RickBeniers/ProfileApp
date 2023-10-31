@@ -17,15 +17,27 @@
 </form>
 
 <h2>Hobby's:</h2>
-<!-- Voeg hier de hobby's van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+<div id="hobbies">
+    <input type="text" name="hobby[]">
+    <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg hobby toe</button>
+</div>
 
 <h2>Werkervaringen:</h2>
-<!-- Voeg hier de werkervaringen van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+<div id="workExperiences">
+    <input type="text" name="job_title[]">
+    <!-- Voeg andere velden toe -->
+    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg werkervaring toe</button>
+</div>
 
 <h2>Schoolprestaties:</h2>
-<!-- Voeg hier de schoolprestaties van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+<div id="schoolAchievements">
+    <input type="text" name="achievement_name[]">
+    <!-- Voeg andere velden toe -->
+    <button type="button" onclick="addField('schoolAchievements', 'achievement_name[]')">Voeg schoolprestatie toe</button>
+</div>
 
 <h2>Vakken die worden gevolgd:</h2>
-<!-- Voeg hier de vakken toe die de gebruiker volgt -->
-</body>
-</html>
+<div id="lessons">
+    <input type="text" name="lesson_name[]">
+    <button type="button" onclick="addField('lessons', 'lesson_name[]')">Voeg vak toe</button>
+</div>
