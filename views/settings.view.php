@@ -28,6 +28,7 @@ require_login();
             <div class="editInputFields">
                 <input type="text" name="first_name" id="first_name" class="settingsField" placeholder="First name">
                 <input onclick="return confirm('Are you sure you wish to edit your first name?')" type="submit" name="edit_first" id="edit_first" class="editButton" value="Change">
+            <!--<div id="confirmModal"></div>-->
             </div>
         </form>
         <form action="../functions/editUser.php" method="post">
