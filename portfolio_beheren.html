@@ -3,12 +3,23 @@
 <head>
     <title>Portfolio Aanpassen</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function addField(containerId, inputName) {
+            const container = document.getElementById(containerId);
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = inputName;
+            container.appendChild(input);
+        }
+    </script>
 </head>
 <body>
-<h1>Welkom, Gebruiker Naam!</h1>
+<h1>Welkom Bij de pagina waar je je portfolio kan aanpassen.</h1>
 
 <form action="update_profile.php" method="post" enctype="multipart/form-data">
-    <label for="firstname">Voornaam:</label>
+    <label for="first_name">Voornaam:</label>
+
     <input type="text" name="firstname" value="Gebruiker Voornaam">
     <!-- Voeg hier de andere velden toe zoals middlename, lastname, enz. -->
     <label for="profile_image">Profielfoto:</label>
@@ -17,15 +28,33 @@
 </form>
 
 <h2>Hobby's:</h2>
-<!-- Voeg hier de hobby's van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+
+<div id="hobbies">
+    <input type="text" name="hobby[]">
+    <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg hobby toe</button>
+</div>
 
 <h2>Werkervaringen:</h2>
-<!-- Voeg hier de werkervaringen van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+<div id="workExperiences">
+    <input type="text" name="job_title[]">
+    <!-- Voeg andere velden toe -->
+    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg werkervaring toe</button>
+</div>
 
 <h2>Schoolprestaties:</h2>
-<!-- Voeg hier de schoolprestaties van de gebruiker toe en maak het mogelijk om ze aan te passen/verwijderen -->
+<div id="schoolAchievements">
+    <input type="text" name="achievement_name[]">
+    <!-- Voeg andere velden toe -->
+    <button type="button" onclick="addField('schoolAchievements', 'achievement_name[]')">Voeg schoolprestatie toe</button>
+</div>
 
 <h2>Vakken die worden gevolgd:</h2>
-<!-- Voeg hier de vakken toe die de gebruiker volgt -->
+<div id="lessons">
+    <input type="text" name="lesson_name[]">
+    <button type="button" onclick="addField('lessons', 'lesson_name[]')">Voeg vak toe</button>
+</div>
+
+
 </body>
+
 </html>
