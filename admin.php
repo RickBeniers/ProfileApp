@@ -54,7 +54,7 @@ header('location:admin_users.php');
 </head>
 <body>
 
-<?php @include 'admin_header.php'; ?>
+<?php //@include 'admin_header.php'; ?>
 
 <section class="users">
 
