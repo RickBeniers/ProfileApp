@@ -1,6 +1,8 @@
 <?php
-
+session_start();
 require '../connection.php';
+require '../functions/auth.php';
+$userId = current_user();
 global $conn;
 //Initial Values
 $error = "";
@@ -78,29 +80,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    if (!empty($error)) {
-        echo $error;
-        return;
-    }
+    error_check($error);
 
-    edit_user_data($conn, $updatedColumn, $possibleVariables);
+    check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $userId, $error);
+
+    edit_user_data($conn, $updatedColumn, $possibleVariables, $userId);
 
 } else {
     header("Location: /controllers/userSettings.php");
     exit();
 }
 
-function edit_user_data($conn, $updatedColumn, $possibleVariables) {
+function check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $userId, $error) {
+    if ($updatedColumn == 'username') {
+        $query = "SELECT username FROM `users`";
+
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $usernames = $stmt->fetchAll();
+        //die(var_dump($usernames));
+        for ($x = 0; $x < count($usernames); $x++) {
+            if ($possibleVariables[3] === $usernames[$x]["username"]) {
+                $error .= "This username is already taken";
+            }
+        }
+    }
+    if ($updatedColumn == '`e-mail`') {
+        $query = "SELECT `e-mail` FROM `users`";
+
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $emails = $stmt->fetchAll();
+
+        for ($x = 0; $x < count($emails); $x++) {
+            if ($possibleVariables[3] == $emails[$x][0]) {
+                $error .= "This e-mail is already taken";
+            }
+        }
+    }
+
+    error_check($error);
+}
+
+function error_check($error) {
+    if (!empty($error)) {
+        echo $error;
+        header("refresh:5;url= /controllers/userSettings.php");
+        exit();
+    }
+}
+
+function edit_user_data($conn, $updatedColumn, $possibleVariables, $userId) {
     $updateVariable = "";
     for ($x = 0; $x < count($possibleVariables); $x++) {
-        if (!empty($possibleVariables[$x]) || $updatedColumn == "insertion") {
+        if (empty($possibleVariables[1]) && $updatedColumn == 'insertion') {
+            $updateVariable = "";
+            break;
+        }
+        if (!empty($possibleVariables[$x])) {
             $updateVariable = $possibleVariables[$x];
             break;
         }
     }
-    $query = "UPDATE `users` SET $updatedColumn = ?";
+    $query = "UPDATE `users` SET $updatedColumn = ? WHERE id = ?";
     $stmt = $conn->prepare($query);
-    $stmt->execute([$updateVariable]);
+    $stmt->execute([$updateVariable, $userId]);
 
     header("Location: /controllers/userSettings.php");
     exit();

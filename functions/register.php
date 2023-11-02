@@ -70,6 +70,7 @@ if (isset($_POST["create_account"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
 
 if (!empty($error)) {
     echo $error;
+    header("refresh:5; url=/controllers/register.php");
     return;
 } else {
     create_account($conn, $first_name, $insertion, $last_name, $username, $email, $hinoxior, $DOB);

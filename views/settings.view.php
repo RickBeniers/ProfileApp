@@ -26,7 +26,7 @@ require_login();
         <form action="../functions/editUser.php" method="post">
             <label for="first_name">Current first name: <?php echo current_first_name($conn)?></label>
             <div class="editInputFields">
-                <input type="text" name="first_name" id="first_name" class="settingsField" placeholder="First name">
+                <input type="text" name="first_name" id="first_name" class="settingsField" placeholder="First name" required>
                 <input onclick="return confirm('Are you sure you wish to edit your first name?')" type="submit" name="edit_first" id="edit_first" class="editButton" value="Change">
             <!--<div id="confirmModal"></div>-->
             </div>
@@ -41,35 +41,36 @@ require_login();
         <form action="../functions/editUser.php" method="post">
             <label for="last_name">Current last name: <?php echo current_last_name($conn)?></label>
             <div class="editInputFields">
-                <input type="text" name="last_name" id="last_name" class="settingsField" placeholder="Last name">
+                <input type="text" name="last_name" id="last_name" class="settingsField" placeholder="Last name" required>
                 <input onclick="return confirm('Are you sure you wish to edit your last name?')" type="submit" name="edit_last" id="edit_last" class="editButton" value="Change">
             </div>
         </form>
         <form action="../functions/editUser.php" method="post">
             <label for="username">Current username: <?php echo current_username($conn)?></label>
             <div class="editInputFields">
-                <input type="text" name="username" id="username" class="settingsField" placeholder="Username">
+                <input type="text" name="username" id="username" class="settingsField" placeholder="Username" required>
                 <input onclick="return confirm('Are you sure you wish to edit your username?')" type="submit" name="edit_username" id="edit_username" class="editButton" value="Change">
             </div>
         </form>
         <form action="../functions/editUser.php" method="post">
             <label for="e-mail">Current e-mail: <?php echo current_email($conn)?></label>
             <div class="editInputFields">
-                <input type="email" name="e-mail" id="e-mail" class="settingsField" placeholder="E-mail">
+                <input type="email" name="e-mail" id="e-mail" class="settingsField" placeholder="E-mail" required>
                 <input onclick="return return_confirm('are you sure you wish to edit your e-mail?', 'ARE YOU REALLY SURE YOU WISH TO EDIT YOUR EMAIL?')" type="submit" name="edit_email" id="edit_email" class="editButton" value="Change">
             </div>
         </form>
         <form action="../functions/editUser.php" method="post">
             <label for="date_of_birth">Current date of birth: <?php echo current_DOB($conn)?></label>
             <div class="editInputFields">
-                <input type="date" name="date_of_birth" id="date_of_birth" class="settingsField" value="2000-01-01" placeholder="">
+                <input type="date" name="date_of_birth" id="date_of_birth" class="settingsField" value="2000-01-01" placeholder="" required>
                 <input onclick="return confirm('Are you sure you wish to edit your date of birth?')" type="submit" name="edit_DOB" id="edit_DOB" class="editButton" value="Change">
             </div>
         </form>
     </div>
-    <a class="linkButtonContainer" href="../controllers/passSettings.php">
-        <button type="button" class="editPassButton">Edit Password</button>
-    </a>
+
+    <div class="linkButtonContainer">
+        <a class="editPassButton" href="../controllers/passSettings.php">Edit Password</a>
+    </div>
 </main>
 
 <footer>
