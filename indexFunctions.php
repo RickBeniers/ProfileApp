@@ -24,13 +24,13 @@ function generateProfileContent(){
     echo'<div class="upperInfoDiv" >
                 <div class="image" ><img src="none"></div>
                 <div class="infoLines flex-containerII">
-                    <h4 class="text"    id="item1">placeholder</h4>
+                    <h4 class="text"    id="item1">First name + Last name</h4>
                     <h class="textField" id="item2"></h>
-                    <h4 class="text"    id="item3">placeholder</h4>
+                    <h4 class="text"    id="item3">Titel</h4>
                     <h class="textField" id="item4"></h>
-                    <h4 class="text"    id="item5">placeholder</h4>
+                    <h4 class="text"    id="item5">Occupation</h4>
                     <h class="textField" id="item6"></h>
-                    <h4 class="text"    id="item7">placeholder</h4>
+                    <h4 class="text"    id="item7">Employer</h4>
                     <h class="textField" id="item8"></h>
                 </div>
             </div>
@@ -49,9 +49,18 @@ function generateProfileContentCard(){
 
     //for each content card generate HTML content
     foreach ($contentCards as $contentCard){
-        echo'<div class="flexV-item">
-                <div class="contentCard-left"></div>
-                <div class="contentCard-right"></div>
+        echo '<div class="flexV-item">
+                <div class="contentCard-left">
+                    <img src="none" class="projectImage">
+                </div>
+                <div class="contentCard-right flex-containerVI">
+                    <h4 class="projectLabel" id="grid-item1">Project titel</h4>
+                    <h class="projectText" id="grid-item2"></h>
+                    <h4 class="projectLabel" id="grid-item3">Project link</h4>
+                    <h class="projectText" id="grid-item4"></h>
+                    <h4 class="projectLabel" id="grid-item5">Project discription</h4>
+                    <h class="projectText" id="grid-item6"></h>
+                </div>
             </div>';
     }
 }
