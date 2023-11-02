@@ -1,5 +1,10 @@
 main {
-    background-color: #D9D9D9;
+    background-color: #4AC9FF;
+    padding: 10px;
+}
+
+.wrapper {
+    background-color: #9EEEFF;
 }
 
 h2 {
