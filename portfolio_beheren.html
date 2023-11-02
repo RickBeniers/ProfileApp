@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Portfolio Aanpassen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script>
@@ -45,7 +49,8 @@
 </head>
 <body>
 <h1>Welkom Bij de pagina waar je je portfolio kan aanpassen.</h1>
-
+<p>a * inside of the input fields below means that it's required.</p>
+<b>The date of birth input field is also required (it's the one with a calender icon)</b>
 <form action="update_profile.php" method="post" enctype="multipart/form-data">
     <label for="profile_image">Profielfoto:</label>
     <input type="file" name="profile_image">
@@ -55,20 +60,36 @@
 <h2>Hobby's:</h2>
 
 <div id="hobbies">
-    <input type="text" name="hobby[]">
+    <input type="text" placeholder="Vul hier je hobby in. *" name="hobby[]">
     <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg hobby toe</button>
-    <label for="profile_image">Hobbyfoto:</label>
+    <label for="Hobby_image">Hobbyfoto:</label>
     <input type="file" name="profile_image">
     <input type="submit" value="Opslaan">
-    <input type="">
+    <label for="Hobby">Beschrijving:</label>
+    <input type="text" placeholder="Beschrijf wat je allemaal doet moet je hobby *">
+    <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg beschrijving toe</button>
 
 </div>
 
 <h2>Werkervaringen:</h2>
 <div id="workExperiences">
-    <input type="text" name="job_title[]">
+    <label for="Job">Werkplek naam:</label>
+    <input type="text" name="job_title[]" placeholder="Vul hier de naam van je werkplek in. *">
     <!-- Voeg andere velden toe -->
-    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg werkervaring toe</button>
+    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg naam van werkplaats  toe</button>
+    <label for="Job">Baan naam:</label>
+    <input type="text" name="job_title[]" placeholder="Vul hier de naam van je baan in. *">
+    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg naam van baan toe</button>
+    <label for="Job">Baas naam:</label>
+    <input type="text" name="job_title[]" placeholder="Vul hier de naam van je baas in. *">
+    <button type="button" onclick="addField('workExperiences', 'job_title[]')">Voeg naam van de baas van het bedrijf to toe</button>
+    <label for="Job">Startdatum:</label>
+    <input type="date" placeholder="Please enter your date of birth. *" name="date_of_birth" id="date_of_birth" class="registerField" value="2000-01-01" required>
+    <label for="Job">Einddatum:</label>
+    <input type="date" placeholder="Please enter your date of birth. *" name="date_of_birth" id="date_of_birth" class="registerField" value="2000-01-01" required>
+    <label for="Job">Beschrijving:</label>
+    <input type="text" placeholder="Beschrijf wat je allemaal doet moet je hobby *">
+    <button type="button" onclick="addField('hobbies', 'hobby[]')">Voeg beschrijving toe</button>
 </div>
 
 <h2>Schoolprestaties:</h2>

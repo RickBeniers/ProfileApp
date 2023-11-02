@@ -3,9 +3,6 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Verwerk de gebruikersgegevens
-    $firstname = $_POST['firstname'];
-    // Verwerk andere velden hier
 
     // Verwerk de dynamische velden, bijvoorbeeld hobby's
     $hobbies = $_POST['hobby'];
