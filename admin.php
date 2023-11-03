@@ -145,7 +145,7 @@
     echo '<table>';
     echo '<tr><th>Gebruikersnaam</th><th>Status</th><th>Actie</th></tr>';
     while ($row = $result->fetch_assoc()) {
-    $gebruikerId = $row['user_id'];
+    $gebruikerId = $row['id'];
     $gebruikersnaam = $row['username'];
     $isGeblokkeerd = $row['is_deleted'];
 

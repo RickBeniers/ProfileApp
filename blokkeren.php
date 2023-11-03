@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['id'])) {
-    $gebruikerId = $_GET['user_id'];
+    $gebruikerId = $_GET['id'];
 
     // Verbinding maken met de database (herhaal de verbindingscode hier)
 
