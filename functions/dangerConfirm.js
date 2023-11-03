@@ -1,3 +1,6 @@
+
+//This function only exists so i can easily use two confirm functions in a row
+//These are used for changing your e-mail and password.
 function return_confirm(confirm1, confirm2) {
     if (confirm(confirm1) === true) {
         return confirm(confirm2);

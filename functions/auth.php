@@ -2,10 +2,13 @@
 require '../connection.php';
 global $conn;
 
+//This function checks if you're logged in
 function is_user_logged_in(): bool {
     return isset($_SESSION["user_id"]);
 }
 
+//If this function is called it will check if you are logged in
+//if you aren't then it will direct you to the login page.
 function require_login(): void {
     if (!is_user_logged_in()) {
         header("Location: /controllers/login.php");
@@ -13,6 +16,7 @@ function require_login(): void {
     }
 }
 
+//calling this function will logout the user
 function logout(): void {
     if(is_user_logged_in()) {
         unset($_SESSION["user_id"]);
@@ -22,6 +26,7 @@ function logout(): void {
     }
 }
 
+//Calling this function will return the current logged in user's ID
 function current_user() {
     if (is_user_logged_in()) {
         return $_SESSION["user_id"];
@@ -29,6 +34,7 @@ function current_user() {
     return null;
 }
 
+//Calling this function will return the current logged in user's Role
 function current_user_role($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT role_id FROM `users` WHERE `id` = ?";
@@ -41,6 +47,7 @@ function current_user_role($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's Username
 function current_username($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT username FROM `users` WHERE `id` = ?";
@@ -53,6 +60,7 @@ function current_username($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's First name
 function current_first_name($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT first_name FROM `users` WHERE `id` = ?";
@@ -65,6 +73,7 @@ function current_first_name($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's Insertion
 function current_insertion($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT insertion FROM `users` WHERE `id` = ?";
@@ -80,6 +89,7 @@ function current_insertion($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's Last name
 function current_last_name($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT last_name FROM `users` WHERE `id` = ?";
@@ -92,6 +102,7 @@ function current_last_name($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's E-mail
 function current_email($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT `e-mail` FROM `users` WHERE `id` = ?";
@@ -104,6 +115,7 @@ function current_email($conn) {
     return null;
 }
 
+//Calling this function will return the current logged in user's Date of Birth
 function current_DOB($conn) {
     if (is_user_logged_in()) {
         $query = "SELECT date_of_birth FROM `users` WHERE `id` = ?";

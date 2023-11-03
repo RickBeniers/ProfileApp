@@ -12,6 +12,10 @@ $email = "";
 $hinoxior = "";
 $DOB = date_create();
 
+//This will check if the Server's Request Method is Post
+//and if said Post came from the create account form.
+//afterwards it will start doing many checks among:
+//empty, to long, valid e-mail and password overlap checks.
 if (isset($_POST["create_account"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     if (strlen($_POST["first_name"]) <= 0) {
         $error .= "first name is empty, <br>";
@@ -68,6 +72,10 @@ if (isset($_POST["create_account"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
+//If any of the checks give an error
+//this will tell the user exactly which part wasn't filled in correctly.
+//and after 5 seconds send them back to the register page.
+//If no errors were made attempty to create an account.
 if (!empty($error)) {
     echo $error;
     header("refresh:5; url=/controllers/register.php");
@@ -76,6 +84,10 @@ if (!empty($error)) {
     create_account($conn, $first_name, $insertion, $last_name, $username, $email, $hinoxior, $DOB);
 }
 
+//This function will attempt to create an account by first inserting
+//the first and last name, insertion, username, e-mail and date of birth into the users table
+//it will then select the newly created account to insert the user's raspyword.
+//It will then send the user towards the login page.
 function create_account($conn, $first_name, $insertion, $last_name, $username, $email, $hinoxior, $DOB) {
     $query1 = "INSERT INTO `users`(first_name, insertion, last_name, username, `e-mail`, date_of_birth) VALUE(?,?,?,?,?,?)";
     $stmt1 = $conn->prepare($query1);
@@ -89,7 +101,7 @@ function create_account($conn, $first_name, $insertion, $last_name, $username, $
     $query3 = "INSERT INTO `raspywords`(user_id, raspword) VALUE(?,?)";
     $stmt3 = $conn->prepare($query3);
     $stmt3->execute([$userId, $hinoxior]);
-    header("Location: /controllers/newAccount.php");
+    header("Location: /controllers/login.php");
     exit();
 }
 

@@ -15,6 +15,8 @@ $email = "";
 $DOB = date_create();
 $possibleVariables = [$first_name, $insertion, $last_name, $username, $email, $DOB];
 
+//checks if the server request method is post
+//afterwards it checks if the posted form matches one of the ones inside the first if statement.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["edit_first"])) {
         if (strlen($_POST["first_name"]) <= 0) {
@@ -91,6 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
+//This function checks if the given data doesn't overlap with an existing username or email
+//if it does it returns an error
 function check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $userId, $error) {
     if ($updatedColumn == 'username') {
         $query = "SELECT username FROM `users`";
@@ -98,7 +102,6 @@ function check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $use
         $stmt = $conn->prepare($query);
         $stmt->execute();
         $usernames = $stmt->fetchAll();
-        //die(var_dump($usernames));
         for ($x = 0; $x < count($usernames); $x++) {
             if ($possibleVariables[3] === $usernames[$x]["username"]) {
                 $error .= "This username is already taken";
@@ -111,7 +114,6 @@ function check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $use
         $stmt = $conn->prepare($query);
         $stmt->execute();
         $emails = $stmt->fetchAll();
-
         for ($x = 0; $x < count($emails); $x++) {
             if ($possibleVariables[3] == $emails[$x][0]) {
                 $error .= "This e-mail is already taken";
@@ -122,6 +124,8 @@ function check_if_data_is_unique($conn, $updatedColumn, $possibleVariables, $use
     error_check($error);
 }
 
+//If any error was detected during the editing process it will display it
+//and return the user to the settings page within 5 seconds
 function error_check($error) {
     if (!empty($error)) {
         echo $error;
@@ -130,6 +134,7 @@ function error_check($error) {
     }
 }
 
+//If no errors have occured this function will attempt to edit the given column
 function edit_user_data($conn, $updatedColumn, $possibleVariables, $userId) {
     $updateVariable = "";
     for ($x = 0; $x < count($possibleVariables); $x++) {
