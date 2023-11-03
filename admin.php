@@ -109,7 +109,7 @@
     }
 
     // Query om alle gebruikers op te halen
-    $query = "SELECT username FROM user";
+    $query = "SELECT username FROM users";
     $result = $db->query($query);
 
     if ($result->num_rows > 0) {
