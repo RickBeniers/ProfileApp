@@ -175,6 +175,8 @@ footer{
     height: 20px;
     width: 90%;
     margin: 0px 0px 0px 5%;
+    text-decoration: black;
+    text-overline-color: black;
 }
 .midSection{
     height: 10%;

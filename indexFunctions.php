@@ -1,22 +1,36 @@
 <?php
+// add the files that are needed to run these functions
+include 'index.controller.php';
 //Generate a number of profile cards
 function generateProfileList(){
     //declare and initialise array object
-    $profileList = array("Sander","Paul","Rick");
+    $profileList = array();
+    $profileList = populateProfileListArray();
 
     //loop through array object
-    foreach ($profileList as $profile){
-        //generate a profile card for each profile in the array object
-        echo'<div class="profileList-item flex-item">
-                <div class="profileList-item-left">
-                    <a ><img src="none" class="profileCardImage"></a>
+    if(is_iterable($profileList)) {
+        foreach ($profileList as $profile) {
+            if($profile['first_name'] == '' && $profile['last_name'] == ''){
+                $profile['first_name'] = 'No';
+                $profile['last_name'] == 'Name';
+            }
+            if($profile['insertion'] == '' || $profile['insertion'] == null){
+                $profile['insertion'] = ' ';
+            }
+            $fullName = $profile['first_name'] .' '. $profile['insertion'] .' '. $profile['last_name'];
+
+            //generate a profile card for each profile in the array object
+            echo "<div class='profileList-item flex-item'>
+                <div class='profileList-item-left'>
+                    <a ><img src='none' class='profileCardImage'></a>
                 </div>
-                <div class="profileList-item-right flex-containerIV">
-                    <h4 class="profileCard-text">full name</h4>
-                    <h4 class="profileCard-text">occupation</h4>
-                    <h4 class="profileCard-text">title</h4>
+                <div class='profileList-item-right flex-containerIV'>
+                    <h4 class='profileCard-text'>$fullName</h4>
+                    <h4 class='profileCard-text'>occupation</h4>
+                    <h4 class='profileCard-text'>title</h4>
                 </div>
-            </div>';
+            </div>";
+        }
     }
 }
 //Generate the specific data contained within the selected profile
