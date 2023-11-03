@@ -1,0 +1,14 @@
+footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: #4AC9FF;
+    padding: 11px 0 11px 10px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        padding: 31px 0 31px 10px;
+    }
+}

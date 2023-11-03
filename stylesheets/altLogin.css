@@ -1,0 +1,69 @@
+/*Mobile/Generic styling*/
+main {
+    background-color: #4AC9FF;
+    padding: 10px;
+}
+
+.loginContainer {
+    background-color: #9EEEFF;
+}
+
+.centerText {
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+.loginField {
+    width: 200px;
+    height: 30px;
+}
+
+.loginButton, .registerButton {
+    width: 100px;
+    height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .loginForm {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .loginField {
+        width: 300px;
+        height: 45px;
+    }
+    .loginButton {
+        width: 200px;
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .registerButton {
+        width: 200px;
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .loginField {
+        width: 400px;
+        height: 60px;
+    }
+
+    .registerButton, .loginButton {
+        width: 300px;
+        height: 45px;
+    }
+}
