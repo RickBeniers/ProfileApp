@@ -2,11 +2,13 @@ main{
     height: 90%;
     width: 100%;
     border: solid black 1px;
+    background-color: #4AC9FF;
 }
 header{
     height: 50px;
     width: 100%;
     border: solid black 1px;
+    background-color: #4AC9FF;
 }
 a{
     text-decoration: none;
@@ -48,6 +50,7 @@ footer{
     height: 50px;
     width: 100%;
     border: solid black 1px;
+    background-color: #4AC9FF;
 }
 .pageButtons{
     float: right;
@@ -79,6 +82,7 @@ footer{
     float: right;
     margin: 10px;
     overflow-y: scroll;
+    background-color: #9EEEFF;
 }
 .indexViewLeft{
     height: 98%;
@@ -87,10 +91,12 @@ footer{
     float: left;
     margin: 10px;
     overflow-y: scroll;
+    background-color: #9EEEFF;
 }
 .upperInfoDiv{
     height: 30%;
     border: solid black 1px;
+    background-color: #4AC9FF;
 }
 .lowerInfoDiv{
     height: 70%;
@@ -102,7 +108,7 @@ footer{
     float: left;
 }
 .image img{
-    border: solid red 1px;
+    border: solid black 1px;
     height: 99%;
     width: 99%;
 }
@@ -153,6 +159,7 @@ footer{
     height: 10%;
     border: solid black 1px;
     margin: 2%;
+    background-color: #4AC9FF;
 }
 .profileList-item-left{
     width: 40%;
@@ -192,6 +199,7 @@ footer{
     width: 95%;
     height: 225px;
     margin: 0px 0px 0px 2%;
+    background-color: #4AC9FF;
 }
 .contentCard-left{
     height: 100%;

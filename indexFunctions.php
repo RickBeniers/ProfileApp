@@ -21,15 +21,15 @@ function generateProfileList(){
 
             //generate a profile card for each profile in the array object
             echo "<div class='profileList-item flex-item'>
-                <div class='profileList-item-left'>
-                    <a ><img src='none' class='profileCardImage'></a>
-                </div>
-                <div class='profileList-item-right flex-containerIV'>
-                    <h4 class='profileCard-text'>$fullName</h4>
-                    <h4 class='profileCard-text'>occupation</h4>
-                    <h4 class='profileCard-text'>title</h4>
-                </div>
-            </div>";
+                    <div class='profileList-item-left'>
+                        <a ><img src='none' class='profileCardImage'></a>
+                    </div>
+                        <div class='profileList-item-right flex-containerIV'>
+                            <h4 class='profileCard-text'>$fullName</h4>
+                            <h4 class='profileCard-text'>occupation</h4>
+                            <h4 class='profileCard-text'>title</h4>
+                        </div>
+                    </div>";
         }
     }
 }
