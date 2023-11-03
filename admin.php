@@ -81,3 +81,5 @@ header('location:admin_users.php');
     </div>
 
 </section>
+</body>
+</html>
