@@ -1,6 +1,6 @@
 <?php
 // add the files that are needed to run these functions
-include 'index.controller.php';
+include '../controllers/index.controller.php';
 //Generate a number of profile cards
 function generateProfileList(){
     //declare and initialise array object
