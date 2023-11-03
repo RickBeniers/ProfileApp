@@ -11,7 +11,7 @@ if (isset($_GET['usernaam'])) {
     $gebruikersnaam = $_GET['username'];
 
     // Query om een gebruiker uit te schakelen
-    $query = "UPDATE user SET is_deleted = 1 WHERE username = '$gebruikersnaam'";
+    $query = "UPDATE users SET is_deleted = 1 WHERE username = '$gebruikersnaam'";
     $result = $db->query($query);
 
     if ($result) {
