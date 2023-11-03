@@ -7,11 +7,11 @@ if ($db->connect_error) {
     die("Databaseverbinding is mislukt: " . $db->connect_error);
 }
 
-if (isset($_GET['gebruikersnaam'])) {
-    $gebruikersnaam = $_GET['gebruikersnaam'];
+if (isset($_GET['usernaam'])) {
+    $gebruikersnaam = $_GET['username'];
 
     // Query om een gebruiker uit te schakelen
-    $query = "UPDATE gebruikers SET uitgeschakeld = 1 WHERE gebruikersnaam = '$gebruikersnaam'";
+    $query = "UPDATE user SET uitgeschakeld = 1 WHERE username = '$gebruikersnaam'";
     $result = $db->query($query);
 
     if ($result) {
