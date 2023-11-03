@@ -68,8 +68,8 @@ header('location:admin_users.php');
                 ?>
                 <div class="box">
                     <p>gebruiker id : <span><?php echo $fetch_users['id']; ?></span></p>
-                    <p>gebruikersnaam : <span><?php echo $fetch_users['name']; ?></span></p>
-                    <p>email : <span><?php echo $fetch_users['email']; ?></span></p>
+                    <p>gebruikersnaam : <span><?php echo $fetch_users['username']; ?></span></p>
+                    <p>email : <span><?php echo $fetch_users['e-mail']; ?></span></p>
                     <p>gebruikerstype : <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; }; ?>"><?php echo $fetch_users['user_type']; ?></span></p>
                    <!-- <a href="admin_user_update.php?update=<?php echo $fetch_users['id']; ?>" onclick="return confirm('deze gebruiker aanpassen?');" class="option-btn">update</a> -->
                     <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('deze gebruiker verwijderen?');" class="delete-btn">verwijderen</a>
