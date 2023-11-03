@@ -138,16 +138,16 @@
     }
 
     // Query om alle gebruikers op te halen
-    $query = "SELECT id, username, is_geblokkeerd FROM users";
+    $query = "SELECT id, username, is_deleted FROM users";
     $result = $mysqli->query($query);
 
     if ($result->num_rows > 0) {
     echo '<table>';
     echo '<tr><th>Gebruikersnaam</th><th>Status</th><th>Actie</th></tr>';
     while ($row = $result->fetch_assoc()) {
-    $gebruikerId = $row['id'];
+    $gebruikerId = $row['user_id'];
     $gebruikersnaam = $row['username'];
-    $isGeblokkeerd = $row['is_geblokkeerd'];
+    $isGeblokkeerd = $row['is_deleted'];
 
     echo '<tr>';
     echo "<td>$gebruikersnaam</td>";

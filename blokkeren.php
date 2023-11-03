@@ -1,11 +1,11 @@
 <?php
 if (isset($_GET['id'])) {
-    $gebruikerId = $_GET['id'];
+    $gebruikerId = $_GET['user_id'];
 
     // Verbinding maken met de database (herhaal de verbindingscode hier)
 
     // Query om de gebruiker te blokkeren
-    $query = "UPDATE users SET is_geblokkeerd = 1 WHERE id = $gebruikerId";
+    $query = "UPDATE users SET is_deleted = 1 WHERE id = $gebruikerId";
     if ($mysqli->query($query)) {
         header('Location: admin.php');
     } else {
