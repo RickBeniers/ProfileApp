@@ -101,29 +101,74 @@
 
     <?php
     // Verbind met de database
-    $db = new mysqli('localhost', 'username', 'raspywords', 'profielplus');
+   // $db = new mysqli('localhost', 'username', 'raspywords', 'profielplus');
 
     // Controleer de verbinding
-    if ($db->connect_error) {
-        die("Databaseverbinding is mislukt: " . $db->connect_error);
+  //  if ($db->connect_error) {
+      //  die("Databaseverbinding is mislukt: " . $db->connect_error);
+   // }
+
+    // Query om alle gebruikers op te halen
+ //   $query = "SELECT username FROM users";
+  //  $result = $db->query($query);
+//
+ //   if ($result->num_rows > 0) {
+  //      while ($row = $result->fetch_assoc()) {
+  //          echo "<tr>";
+   //         echo "<td>" . $row['username'] . "</td>";
+   //         echo "<td><a href='disable_user.php?username=" . $row['username'] . "'>Uitschakelen</a></td>";
+   //         echo "</tr>";
+   //     }
+ //   }
+
+    // Sluit de databaseverbinding
+ //   $db->close();
+ //   ?>
+    <?php
+    // Verbinding maken met de database
+    $dbHost = 'localhost'; // De host van je database
+    $dbGebruikersnaam = 'username'; // Je database gebruikersnaam
+    $dbWachtwoord = 'raspywords'; // Je database wachtwoord
+    $dbNaam = 'profielplus'; // Naam van je database
+
+    $mysqli = new mysqli($dbHost, $dbGebruikersnaam, $dbWachtwoord, $dbNaam);
+
+    if ($mysqli->connect_error) {
+    die('Verbindingsfout: ' . $mysqli->connect_error);
     }
 
     // Query om alle gebruikers op te halen
-    $query = "SELECT username FROM users";
-    $result = $db->query($query);
+    $query = "SELECT id, username, is_geblokkeerd FROM users";
+    $result = $mysqli->query($query);
 
     if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $row['username'] . "</td>";
-            echo "<td><a href='disable_user.php?username=" . $row['username'] . "'>Uitschakelen</a></td>";
-            echo "</tr>";
-        }
+    echo '<table>';
+    echo '<tr><th>Gebruikersnaam</th><th>Status</th><th>Actie</th></tr>';
+    while ($row = $result->fetch_assoc()) {
+    $gebruikerId = $row['id'];
+    $gebruikersnaam = $row['username'];
+    $isGeblokkeerd = $row['is_geblokkeerd'];
+
+    echo '<tr>';
+    echo "<td>$gebruikersnaam</td>";
+    echo "<td>" . ($isGeblokkeerd ? 'Geblokkeerd' : 'Actief') . "</td>";
+    echo "<td>";
+    if ($isGeblokkeerd) {
+    echo "<a href='ontgrendelen.php?id=$gebruikerId'>Ontgrendelen</a>";
+    } else {
+    echo "<a href='blokkeren.php?id=$gebruikerId'>Blokkeren</a>";
+    }
+    echo "</td>";
+    echo '</tr>';
+    }
+    echo '</table>';
+    } else {
+    echo 'Geen gebruikers gevonden.';
     }
 
-    // Sluit de databaseverbinding
-    $db->close();
+    $mysqli->close();
     ?>
+
 </table>
 </body>
 
