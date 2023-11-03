@@ -21,7 +21,7 @@
 <?php
 session_start();
 
-$admin_id = $_SESSION['admin_id'];
+$user_id = $_SESSION['user_id'];
 
 if(!isset($admin_id)){
 header('location:login.php');
@@ -63,7 +63,7 @@ header('location:admin_users.php');
     <div class="box-container">
         <?php
         $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
-        if(mysqli_num_rows($select_users) > 0){
+        if(mysqli_num_rows($select_users) > 1){
             while($fetch_users = mysqli_fetch_assoc($select_users)){
                 ?>
                 <div class="box">
