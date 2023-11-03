@@ -7,7 +7,7 @@ if ($db->connect_error) {
     die("Databaseverbinding is mislukt: " . $db->connect_error);
 }
 
-if (isset($_GET['usernaam'])) {
+if (isset($_GET['username'])) {
     $gebruikersnaam = $_GET['username'];
 
     // Query om een gebruiker uit te schakelen
