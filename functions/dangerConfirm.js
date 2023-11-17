@@ -9,7 +9,7 @@ function return_confirm(confirm1, confirm2) {
     }
 }
 
-//Until i figure out how to properly use this it will most likely stay unused.
+//everything below here will most likely stay unused until i figure out how to properly use it.
 //It needs to be able to be displayed in the middle of the page once while still being able to be used in every form
 //visible on page.
 function display_confirm_modal(dangerousAction, inputType, inputName) {

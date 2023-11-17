@@ -1,18 +1,26 @@
 /*Mobile/Generic styling*/
+
+/*
+    This gives the main a bit of surrounding padding and a different background color
+    This way it more closely follows the design I had envisioned in Figma
+ */
 main {
     background-color: #4AC9FF;
     padding: 10px;
 }
 
+/* This just changes the loginContainer's backgroundcolor */
 .loginContainer {
     background-color: #9EEEFF;
 }
 
+/* This centers the text at the top of the form */
 .centerText {
     margin: 0 auto 0 auto;
     text-align: center;
 }
 
+/* Displays the loginForm as a flex container in column direction and also centering the items within */
 .loginForm {
     display: flex;
     flex-direction: column;
@@ -21,17 +29,24 @@ main {
     padding: 10px;
 }
 
+/* Sets the width and height of the loginField */
 .loginField {
     width: 200px;
     height: 30px;
 }
 
+/* Sets the width and height of the loginButton and the registerButton */
 .loginButton, .registerButton {
     width: 100px;
     height: 30px;
 }
 
+/* This starts the Tablet device changes */
 @media only screen and (min-width: 768px) {
+    /*
+    Displays the loginForm as a grid container
+    so the items are displayed in two columns side by side
+*/
     .loginForm {
         display: grid;
         grid-auto-flow: column;
@@ -40,15 +55,18 @@ main {
         justify-content: center;
     }
 
+    /* Resizes the loginField */
     .loginField {
         width: 300px;
         height: 45px;
     }
+    /* Resizes the width and sets the loginButton's position withing the grid */
     .loginButton {
         width: 200px;
         grid-column: 1;
         grid-row: 3;
     }
+    /* Resizes the width and sets the registerButton's position withing the grid */
     .registerButton {
         width: 200px;
         grid-column: 2;
@@ -56,12 +74,15 @@ main {
     }
 }
 
+/* This starts the Laptop device changes */
 @media only screen and (min-width: 1200px) {
+    /* Resizes the loginField */
     .loginField {
         width: 400px;
         height: 60px;
     }
 
+    /* Resizes the registerButton and loginButton */
     .registerButton, .loginButton {
         width: 300px;
         height: 45px;

@@ -1,3 +1,8 @@
+
+/*
+    makes the footer stick at the bottom of the page
+    and also gives it the same background color the header/navbar had
+*/
 footer {
     position: sticky;
     bottom: 0;
@@ -7,7 +12,9 @@ footer {
     margin-top: 10px;
 }
 
+/* This starts the Tablet/Laptop device changes */
 @media only screen and (min-width: 768px) {
+    /* Enlarges the footer's Padding */
     footer {
         padding: 31px 0 31px 10px;
     }

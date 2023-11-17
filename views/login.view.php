@@ -18,6 +18,7 @@ if (current_user() == null) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import the header, footer and this page's css -->
     <link rel="stylesheet" href="../stylesheets/nav.css">
     <link rel="stylesheet" href="../stylesheets/footer.css">
     <link rel="stylesheet" href="../stylesheets/login.css">
