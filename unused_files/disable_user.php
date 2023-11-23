@@ -23,6 +23,7 @@ if (isset($_GET['username'])) {
 
 // Sluit de databaseverbinding
 $db->close();
+// Deze code is niet relevant.
 ?>
 
 
