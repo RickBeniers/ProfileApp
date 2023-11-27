@@ -1,9 +1,11 @@
+/* styling for the main part of the page.*/
 main{
     height: 90%;
     width: 100%;
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+/* styling for the header part of the page.*/
 header{
     height: 50px;
     width: 100%;
@@ -13,6 +15,7 @@ header{
 a{
     text-decoration: none;
 }
+/* below is the styling for the diffrent flex and grid containers.*/
 .flex-container{
     display: flex;
     column-gap: 10px;
@@ -46,6 +49,7 @@ a{
     justify-content: center;
     row-gap: 5px;
 }
+/* styling for the footer part of the page.*/
 footer{
     height: 50px;
     width: 100%;
