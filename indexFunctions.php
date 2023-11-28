@@ -26,9 +26,12 @@ function generateProfileList(){
             echo "<div class='profileList-item flex-item'>
                     <!-- div below contains the image of a person.-->
                     <div class='profileList-item-left'>
+                        <!-- The image tag is surrounded by an a tag, this way the whole image is clickable. -->
                         <a ><img src='none' class='profileCardImage'></a>
                     </div>
                         <!-- div below contains the personal details of a person.-->
+                        <!-- The elements below are positioned with the help of a flex box named flex-containerIV.-->
+                        <!-- The elements below will be displayed in a colum. with elements underneath eachother.-->
                         <div class='profileList-item-right flex-containerIV'>
                             <h4 class='profileCard-text'>$fullName</h4>
                             <h4 class='profileCard-text'>occupation</h4>
@@ -45,6 +48,9 @@ function generateProfileContent(){
                 <div class="image" ><img src="none"></div>
                 <!-- div below contains personal details of the profile owner-->
                 <div class="infoLines flex-containerII">
+                    <!-- The elements below are positioned using a flexbox named flex-containerII-->
+                    <!-- The elements below are positioned in a colum. -->
+                    <!-- The h4 tags are used as labels and the h tags as the textfields.-->
                     <h4 class="text"    id="item1">First name + Last name</h4>
                     <h class="textField" id="item2"></h>
                     <h4 class="text"    id="item3">Titel</h4>
@@ -59,6 +65,8 @@ function generateProfileContent(){
             <div class="lowerInfoDiv">
                 <div class="midSection"></div>
                 <div class="lowerSection flex-containerV">
+                <!-- all elements generated through the method below are items of the flexbox.-->
+                <!-- all elements will be positioned underneath each other and thus displayed in a colum.-->
                     '; generateProfileContentCard(); echo'
                 </div>
             </div>
@@ -78,6 +86,10 @@ function generateProfileContentCard(){
                 </div>
                 <!-- Div contains project details.-->
                 <div class="contentCard-right flex-containerVI">
+                    <!-- the elements below are positioned using a flexbox named flex-containerVI.-->
+                    <!-- The elements below are positioned in a colum.-->
+                    <!-- The h4 tags are used as labels and the h tags are used s textfields.-->
+                    <!-- The order of the elements below is given via the grid-item ids.-->
                     <h4 class="projectLabel" id="grid-item1">Project titel</h4>
                     <h class="projectText" id="grid-item2"></h>
                     <h4 class="projectLabel" id="grid-item3">Project link</h4>
