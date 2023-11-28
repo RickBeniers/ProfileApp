@@ -1,4 +1,8 @@
 <?php
+/*
+ * This is unused it was suposed to display the confirm modal
+ * upon changing sensitive info like your e-mail and password
+*/
 $inputType = "";
 $dangerousAction = false;
 

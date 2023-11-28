@@ -91,7 +91,7 @@ if (current_user_role($conn) != 2) {
 </html> -->
 
 <!DOCTYPE html>
-
+<!-- Hier is het front end gedeelte van de beheerders pagina. -->
 <head>
     <title>Admin Pagina</title>
     <meta charset="UTF-8">

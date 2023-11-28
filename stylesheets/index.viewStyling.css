@@ -1,28 +1,44 @@
+
 /* styling for the main part of the page.*/
-main{
+main {
     height: 90%;
     width: 100%;
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+
 /* styling for the header part of the page.*/
-header{
+/*Algemene Opmaak (main):
+
+De main sectie van de pagina beslaat 90% van de hoogte en 100% van de breedte.
+Het heeft een zwarte rand van 1 pixel en een achtergrondkleur van #4AC9FF (een soort lichtblauw).*/
+header {
     height: 50px;
     width: 100%;
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+
 /* All a tags(links) will have no text decoration.*/
-a{
-    text-decoration: none;
-}
 /* below is the styling for the diffrent flex and grid containers.*/
 /* flex container for two buttons in the header.*/
-.flex-container{
+
+/*Header (header):
+
+Een header met een hoogte van 50 pixels die dezelfde opmaak heeft als de main sectie.*/
+a {
+    text-decoration: none;
+}
+
+/*Hyperlinks (a):
+
+Hyperlinks hebben geen onderstreping (text-decoration: none), waarschijnlijk om de standaardopmaak te verwijderen.*/
+.flex-container {
     display: flex;
     column-gap: 10px;
     flex-direction: row;
 }
+
 /* flex container for text fields and labels next to profile picture on profiel overzicht page.*/
 .flex-containerII{
     display: flex;
@@ -30,24 +46,28 @@ a{
     row-gap: 10px;
     justify-content: center;
 }
+
 /* flex container to display profiles in a list on the left side of the profiel overzicht page*/
 .flex-containerIII{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
+
 /* flex container to display labels inside of the profile card in the profile list on the profiel overzicht page*/
 .flex-containerIV{
     display: flex;
     flex-direction: column;
     row-gap: 5%;
 }
+
 /* flex container for list of projects & experiences on profiel overzicht page*/
 .flex-containerV{
     display: flex;
     flex-direction: column;
     row-gap: 25px;
 }
+
 /* flex container to display textfields & labels inside of div for projects or experiences.*/
 .flex-containerVI{
     display: grid;
@@ -56,13 +76,18 @@ a{
     justify-content: center;
     row-gap: 5px;
 }
+
 /* styling for the footer part of the page.*/
 footer{
+/*Flex Containers (flex-container, flex-containerII, ...):
+
+Deze klassen definiëren verschillende soorten flex containers (met verschillende richtingen en ruimtes tussen de items) voor het positioneren van elementen op de pagina.*/
     height: 50px;
     width: 100%;
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+
 /* set the relative position of the buttons in the header.*/
 .pageButtons{
     float: right;
@@ -83,7 +108,10 @@ footer{
     line-height: 25px;
 }
 /* set the width and height of the page title in the header.*/
-#hTagTitle{
+/*Knop (Button):
+
+Een algemene klasse voor knoppen met een vaste breedte en hoogte, een zwarte rand en gecentreerde tekst.*/
+#hTagTitle {
     margin-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
@@ -100,6 +128,7 @@ footer{
     overflow-y: scroll;
     background-color: #9EEEFF;
 }
+
 /* sets the styling of the left part of the profiel overzicht page*/
 .indexViewLeft{
     height: 98%;
@@ -110,6 +139,7 @@ footer{
     overflow-y: scroll;
     background-color: #9EEEFF;
 }
+
 /* sets the styling for the list of projects, experiences and the larger profile picture*/
 /* and the details textfields/ labels on the left side of the profiel overzicht page.*/
 .upperInfoDiv{
@@ -150,11 +180,13 @@ footer{
 }
 /* *sets the width and height of the h4 tags inside the div with class infolines.*/
 .text{
+
     height: 5%;
     width: 95%;
     margin: 0px 0px 0px 10px;
     padding: 0px;
 }
+
 /* assigns order 1 to the 1st item in the the div with class infolines.*/
 #item1{
     order: 1;
@@ -188,6 +220,7 @@ footer{
     order: 8;
 }
 /* sets the styling for the div containing the profile card in the list with profiles.*/
+/*Elementen met specifieke ID's (item1, item2, ...):
 .profileList-item{
     width: 95%;
     height: 10%;
@@ -195,12 +228,15 @@ footer{
     margin: 2%;
     background-color: #4AC9FF;
 }
+
 /* sets the styling for the left side of the div with class profileList-item.*/
 .profileList-item-left{
+
     width: 40%;
     height: 100%;
     float: left;
 }
+
 /* sets the height and width of the profile picture for the list of profiles*/
 .profileCardImage{
     height: 90%;
@@ -215,6 +251,7 @@ footer{
     float: right;
     justify-content: center;
 }
+
 /* sets the styling for the h4 tags inside the profile card in the list of profiles*/
 .profileCard-text{
     height: 20px;
@@ -230,6 +267,8 @@ footer{
     width: 100%;
 }
 /* sets the width and height for the div containing the list of projects and experiences.*/
+/*Profiellijst en -kaart (profileList-item, profileList-item-left, ...):
+Stijlen voor het weergeven van profiellijstitems met een linker- en rechterdeel.*/
 .lowerSection{
     height: 100%;
     width: 100%;
@@ -237,6 +276,9 @@ footer{
 }
 /* sets the height and width of the card containing details about a project or work experience.*/
 /* in the list of projects or experiences.*/
+/*Midden- en Ondergedeelte (midSection, lowerSection):
+
+Stijlen voor bepaalde delen van de pagina.*/
 .flexV-item{
     border: solid black 1px;
     width: 95%;
@@ -244,8 +286,10 @@ footer{
     margin: 0px 0px 0px 2%;
     background-color: #4AC9FF;
 }
+
 /* sets the width and height of the left div inside the div containing details about a project or experience.*/
 .contentCard-left{
+
     height: 100%;
     width: 30%;
     float: left;
@@ -257,11 +301,15 @@ footer{
     float: right;
 }
 /* sets the width and height of the project or experience card picture.*/
+/*Projectkaart (contentCard-left, contentCard-right):
+
+Een kaart voor het weergeven van projectinformatie met linker- en rechtergedeelten.*/
 .projectImage{
     height: 90%;
     width: 90%;
     margin: 4%;
 }
+
 /* sets the margin to zero for all the labels inside the div with project or work experience details.*/
 .projectLabel{
     margin: 0px;
@@ -303,3 +351,18 @@ footer{
     grid-column: 1 / 3;
     border: solid black 1px;
 }
+
+/*Grid Items (grid-item1, grid-item2, ...):
+
+Stijlen voor items in een grid, zoals hun positie en eventuele randen.*/
+
+
+/*Afbeeldingen (image, projectImage):
+
+Stijlen voor het weergeven van afbeeldingen binnen hun respectieve containers.
+Tekstvelden (textField, text):
+
+Stijlen voor invoervelden en tekstgebieden.
+Overige Stijlen:
+
+Verschillende andere stijlen, zoals hoogte, breedte, marges, en achtergrondkleuren, zijn gedefinieerd voor specifieke elementen op de pagina.*/

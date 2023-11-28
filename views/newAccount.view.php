@@ -17,6 +17,7 @@ if($_SESSION["loggedin"] == true) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Import the header, footer and this page's css -->
     <link rel="stylesheet" href="../stylesheets/nav.css">
     <link rel="stylesheet" href="../stylesheets/footer.css">
     <link rel="stylesheet" href="../stylesheets/register.css">
@@ -24,15 +25,19 @@ if($_SESSION["loggedin"] == true) {
 </head>
 <body>
     <header>
+        <!-- Navbar/Header -->
         <?php require 'partials/nav.php'; ?>
     </header>
     <main>
+        <!-- The page's container -->
         <div class="registerContainer">
+            <!-- Centers the text which explains some stuff about this page -->
             <div class="centerText">
                 <h1>Create your Profielplus account</h1>
                 <p>a * inside of the input fields below means that it's required.</p>
                 <b>The date of birth input field is also required (it's the one with a calender icon)</b>
             </div>
+            <!-- This form will create an account if you fill in the required forms -->
             <form action="../functions/register.php" method="post"  class="registerForm">
                 <input type="text" placeholder="Enter your first name. *" name="first_name" id="first_name" class="registerField" value="" required>
                 <input type="text" placeholder="Enter your name's insertion." name="insertion" id="insertion" class="registerField" value="">
@@ -47,6 +52,7 @@ if($_SESSION["loggedin"] == true) {
         </div>
     </main>
     <footer>
+        <!-- Footer -->
         <?php require 'partials/footer.php';?>
     </footer>
 </body>

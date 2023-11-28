@@ -1,3 +1,4 @@
+/*body: Dit gedeelte stelt algemene stijlinstellingen in voor de hele pagina. Het gebruikt het lettertype Arial of een sans-serif lettertype als back-up. De paginamarges en het vullingsgebied worden ingesteld op nul, en de achtergrondkleur wordt ingesteld op een lichte grijstint (#f0f0f0).*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,11 +6,13 @@ body {
     background-color: #f0f0f0;
 }
 
+/*main: Dit gedeelte bepaalt de stijl van het hoofdgedeelte van de pagina, waarschijnlijk het belangrijkste inhoudsgebied. Het heeft een vulling van 20 pixels en een achtergrondkleur van lichtblauw (#4AC9FF).*/
 main {
     padding: 20px;
     background-color: #4AC9FF;
 }
 
+/*.login-container: Dit is de stijl voor een specifieke container met een klasse genaamd "login-container". Het heeft een achtergrondkleur van lichtblauw (#9EEEFF), vulling van 20 pixels, afgeronde hoeken van 10 pixels, een lichte schaduw en een maximale breedte van 300 pixels. Het wordt ook gecentreerd op de pagina met margin: 0 auto.*/
 .login-container {
     background-color: #9EEEFF;
     padding: 20px;
@@ -19,15 +22,18 @@ main {
     margin: 0 auto;
 }
 
+/*.login-container h2: Dit stelt de stijl in voor de h2-koptekst binnen de "login-container". Het heeft een ondermarge van 10 pixels.*/
 .login-container h2 {
     margin-bottom: 10px;
 }
 
+/*.login-container label: Dit stelt de stijl in voor labels binnen de "login-container". Ze worden weergegeven als blokelementen met een ondermarge van 5 pixels.*/
 .login-container label {
     display: block;
     margin-bottom: 5px;
 }
 
+/*inputFields: Dit stelt de stijl in voor invoervelden met de klasse "inputFields". Ze hebben een breedte van 100%, een vulling van 10 pixels, een ondermarge van 10 pixels, een 1-pixel grens met een lichte grijze kleur, en afgeronde hoeken van 5 pixels.*/
 .inputFields {
     width: 100%;
     padding: 10px;
@@ -36,10 +42,12 @@ main {
     border-radius: 5px;
 }
 
+/*.login-container p: Dit stelt de stijl in voor paragrafen binnen de "login-container". Ze hebben een bovenmarge van 20 pixels.*/
 .login-container p {
     margin-top: 20px;
 }
 
+/*.loginButton, .registerButton: Dit stelt de stijl in voor knoppen met de klassen "loginButton" en "registerButton". Ze hebben een vulling van 10 pixels boven en onder, een vulling van 20 pixels aan de zijkanten, een achtergrondkleur van donkerblauw (#007BFF), witte tekst, geen rand, afgeronde hoeken van 5 pixels, en een aanwijzer die aangeeft dat het een klikbaar element is.*/
 .loginButton, .registerButton {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -49,6 +57,7 @@ main {
     cursor: pointer;
 }
 
+/*.loginButton:hover, .registerButton:hover: Dit stelt de stijl in voor de knoppen wanneer de muis erover zweeft. De achtergrondkleur verandert naar een donkerdere tint blauw (#0056b3).*/
 .loginButton:hover, .registerButton:hover {
     background-color: #0056b3;
 }

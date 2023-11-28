@@ -7,7 +7,7 @@ function GetConnection(){
         //declare and initialise variables
         $userName = "";
         $password = "";
-        $dbname = "profielapp";
+        $dbname = "profileapp";
 
         //open connection with database
         $conn = new PDO('mysql:host=localhost;dbname='.$dbname, $userName, $password);

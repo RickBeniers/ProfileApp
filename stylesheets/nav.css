@@ -1,14 +1,23 @@
+/*
+    Sets the base values of everything's margin and padding to 0
+    and sets everything's box-sizing to border-box
+*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*
+    This ensures the link buttons inside the navbar have a different color
+    and removes the line below the link's text.
+*/
 a {
     text-decoration: none;
     background-color: #D9D9D9;
 }
 
+/* This is the main navbar styling ensuring it also stays at the top with a flex display */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -20,12 +29,14 @@ a {
     margin-bottom: 10px;
 }
 
+/* This wraps the nav buttons within the navbar with flex */
 .navButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* This styles the individual nav button */
 .navButton {
     font-size: small;
     margin: 0 1px;
@@ -33,22 +44,19 @@ a {
     padding: 2px;
 }
 
+/* This starts the changes made on Tablet sized devices */
 @media only screen and (min-width: 768px) {
+    /* Enlarges the font-size so it's easier to read */
     .navButton {
         margin: 0 3px;
         font-size: larger;
     }
-    .navbar {
-        height: 80px;
-        padding: 15px;
-    }
 }
 
+/* This starts the changes made on laptop sized devices */
 @media only screen and (min-width: 1200px) {
+    /* Enlarges the font-size so it's easier to read */
     .navButton {
         font-size: xx-large;
-    }
-    .navbar {
-        padding: 15px;
     }
 }
