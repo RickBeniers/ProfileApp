@@ -19,5 +19,6 @@ function GetProfileListDetails(){
     //populate array
     $detailArray = array();
     $detailArray = GetProfileCardInfo($sqlString);
+    //return array to be used in generating a list of profiles.
     return $detailArray;
 }
