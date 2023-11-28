@@ -1,6 +1,6 @@
 <?php
 // add files required for the controller to work
-require 'database.model.php';
+require '../database.model.php';
 function populateProfileListArray(){
     //create sql statement
     $sqlString ='SELECT first_name, last_name, insertion 

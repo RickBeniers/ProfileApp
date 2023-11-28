@@ -1,3 +1,10 @@
+<?php
+session_start();
+require '../functions/auth.php';
+if (current_user_role($conn) != 2) {
+    header("Location: index.view.php");
+}
+?>
 <!--<!DOCTYPE html>
 <html>
 <head>
@@ -127,9 +134,9 @@
     <?php
     // Verbinding maken met de database
     $dbHost = 'localhost'; // De host van je database
-    $dbGebruikersnaam = 'username'; // Je database gebruikersnaam
-    $dbWachtwoord = 'raspywords'; // Je database wachtwoord
-    $dbNaam = 'profielplus'; // Naam van je database
+    $dbGebruikersnaam = 'root'; // Je database gebruikersnaam
+    $dbWachtwoord = ''; // Je database wachtwoord
+    $dbNaam = 'profileapp'; // Naam van je database
 
     $mysqli = new mysqli($dbHost, $dbGebruikersnaam, $dbWachtwoord, $dbNaam);
 
@@ -154,9 +161,9 @@
     echo "<td>" . ($isGeblokkeerd ? 'Geblokkeerd' : 'Actief') . "</td>";
     echo "<td>";
     if ($isGeblokkeerd) {
-    echo "<a href='ontgrendelen.php?id=$gebruikerId'>Ontgrendelen</a>";
+    echo "<a href='../functions/ontgrendelen.php?id=$gebruikerId'>Ontgrendelen</a>";
     } else {
-    echo "<a href='blokkeren.php?id=$gebruikerId'>Blokkeren</a>";
+    echo "<a href='../functions/blokkeren.php?id=$gebruikerId'>Blokkeren</a>";
     }
     echo "</td>";
     echo '</tr>';
