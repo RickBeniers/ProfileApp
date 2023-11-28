@@ -12,36 +12,43 @@ header{
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+/* All a tags(links) will have no text decoration.*/
 a{
     text-decoration: none;
 }
 /* below is the styling for the diffrent flex and grid containers.*/
+/* flex container for two buttons in the header.*/
 .flex-container{
     display: flex;
     column-gap: 10px;
     flex-direction: row;
 }
+/* flex container for text fields and labels next to profile picture on profiel overzicht page.*/
 .flex-containerII{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     justify-content: center;
 }
+/* flex container to display profiles in a list on the left side of the profiel overzicht page*/
 .flex-containerIII{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
+/* flex container to display labels inside of the profile card in the profile list on the profiel overzicht page*/
 .flex-containerIV{
     display: flex;
     flex-direction: column;
     row-gap: 5%;
 }
+/* flex container for list of projects & experiences on profiel overzicht page*/
 .flex-containerV{
     display: flex;
     flex-direction: column;
     row-gap: 25px;
 }
+/* flex container to display textfields & labels inside of div for projects or experiences.*/
 .flex-containerVI{
     display: grid;
     grid-template-columns: 49% 49%;
@@ -56,13 +63,16 @@ footer{
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+/* set the relative position of the buttons in the header.*/
 .pageButtons{
     float: right;
     margin-right: 10px;
 }
+/* set the relative position of the page title in the header.*/
 .pageTitle{
     float: left;
 }
+/* set the styling for the buttons in the header.*/
 .Button{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -72,6 +82,7 @@ footer{
     text-align: center;
     line-height: 25px;
 }
+/* set the width and height of the page title in the header.*/
 #hTagTitle{
     margin-bottom: 10px;
     margin-top: 10px;
@@ -79,6 +90,7 @@ footer{
     height: 30px;
     width: 300px;
 }
+/* sets the height and width  of the right div in wich the list of profiles is displayed.*/
 .indexViewRight{
     height: 98%;
     width: 25%;
@@ -88,6 +100,7 @@ footer{
     overflow-y: scroll;
     background-color: #9EEEFF;
 }
+/* sets the styling of the left part of the profiel overzicht page*/
 .indexViewLeft{
     height: 98%;
     width: 70%;
@@ -97,30 +110,37 @@ footer{
     overflow-y: scroll;
     background-color: #9EEEFF;
 }
+/* sets the styling for the list of projects, experiences and the larger profile picture*/
+/* and the details textfields/ labels on the left side of the profiel overzicht page.*/
 .upperInfoDiv{
     height: 30%;
     border: solid black 1px;
     background-color: #4AC9FF;
 }
+/* sets the height of the div containing the list of projects and experiences.*/
 .lowerInfoDiv{
     height: 70%;
     border: solid black 1px;
 }
+/* sets the width and height of the div containing larger profile picture on the left side of the profiel overzicht page.*/
 .image{
     height: 100%;
     width: 40%;
     float: left;
 }
+/* sets the width and height of the larger profile picture.*/
 .image img{
     border: solid black 1px;
     height: 99%;
     width: 99%;
 }
+/* sets the width and height of the div containing textfields and labels with profile details of the profile owner.*/
 .infoLines{
     height: 100%;
     width: 60%;
     float: right;
 }
+/* sets the width and height of the textfield inside the div with class infolines.*/
 .textField{
     height: 8%;
     width: 95%;
@@ -128,36 +148,46 @@ footer{
     margin: 0px 0px 0px 10px;
     padding: 0px;
 }
+/* *sets the width and height of the h4 tags inside the div with class infolines.*/
 .text{
     height: 5%;
     width: 95%;
     margin: 0px 0px 0px 10px;
     padding: 0px;
 }
+/* assigns order 1 to the 1st item in the the div with class infolines.*/
 #item1{
     order: 1;
 }
+/* assigns order 2 to the 2nd item in the the div with class infolines.*/
 #item2{
     order: 2;
 }
+/* assigns order 3 to the 3rd item in the the div with class infolines.*/
 #item3{
     order: 3;
 }
+/* assigns order 4 to the 4th item in the the div with class infolines.*/
 #item4{
     order: 4;
 }
+/* assigns order 5 to the 5th item in the the div with class infolines.*/
 #item5{
     order: 5;
 }
+/* assigns order 6 to the 6st item in the the div with class infolines.*/
 #item6{
     order: 6;
 }
+/* assigns order 7 to the 7th item in the the div with class infolines.*/
 #item7{
     order: 7;
 }
+/* assigns order 8 to the 8th item in the the div with class infolines.*/
 #item8{
     order: 8;
 }
+/* sets the styling for the div containing the profile card in the list with profiles.*/
 .profileList-item{
     width: 95%;
     height: 10%;
@@ -165,23 +195,27 @@ footer{
     margin: 2%;
     background-color: #4AC9FF;
 }
+/* sets the styling for the left side of the div with class profileList-item.*/
 .profileList-item-left{
     width: 40%;
     height: 100%;
     float: left;
 }
+/* sets the height and width of the profile picture for the list of profiles*/
 .profileCardImage{
     height: 90%;
     width: 90%;
     border: solid black 1px;
     margin: 5px;
 }
+/* sets the styling for the right side of the profile card inside the list of profiles.*/
 .profileList-item-right{
     height: 100%;
     width: 60%;
     float: right;
     justify-content: center;
 }
+/* sets the styling for the h4 tags inside the profile card in the list of profiles*/
 .profileCard-text{
     height: 20px;
     width: 90%;
@@ -189,15 +223,20 @@ footer{
     text-decoration: black;
     text-overline-color: black;
 }
+/* sets the width and height for the div between the list of projects and experiences*/
+/* and the div containing detalis about the profile owner.*/
 .midSection{
     height: 10%;
     width: 100%;
 }
+/* sets the width and height for the div containing the list of projects and experiences.*/
 .lowerSection{
     height: 100%;
     width: 100%;
     justify-content: center;
 }
+/* sets the height and width of the card containing details about a project or work experience.*/
+/* in the list of projects or experiences.*/
 .flexV-item{
     border: solid black 1px;
     width: 95%;
@@ -205,49 +244,60 @@ footer{
     margin: 0px 0px 0px 2%;
     background-color: #4AC9FF;
 }
+/* sets the width and height of the left div inside the div containing details about a project or experience.*/
 .contentCard-left{
     height: 100%;
     width: 30%;
     float: left;
 }
+/* sets the width and height of the right div inside the div containing details about a project or experience.*/
 .contentCard-right{
     height: 100%;
     width: 70%;
     float: right;
 }
+/* sets the width and height of the project or experience card picture.*/
 .projectImage{
     height: 90%;
     width: 90%;
     margin: 4%;
 }
+/* sets the margin to zero for all the labels inside the div with project or work experience details.*/
 .projectLabel{
     margin: 0px;
 }
+/* sets the margin to zero for all the textfields inside the div with project or work experience details.*/
 .projectText{
     margin: 0px;
 }
+/* sets the grid position of item 1 in the div containing details about a project or work experience.*/
 #grid-item1{
     grid-row: 2;
     grid-column: 1;
 }
+/* sets the grid position of item 2 in the div containing details about a project or work experience.*/
 #grid-item2{
     grid-row: 3;
     grid-column: 1;
     border: solid black 1px;
 }
+/* sets the grid position of item 3 in the div containing details about a project or work experience.*/
 #grid-item3{
     grid-row: 2;
     grid-column: 2;
 }
+/* sets the grid position of item 4 in the div containing details about a project or work experience.*/
 #grid-item4{
     grid-row: 3;
     grid-column: 2;
     border: solid black 1px;
 }
+/* sets the grid position of item 5 in the div containing details about a project or work experience.*/
 #grid-item5{
     grid-row: 4;
     grid-column: 1;
 }
+/* sets the grid position of item 6 in the div containing details about a project or work experience.*/
 #grid-item6{
     grid-row: 5;
     grid-column: 1 / 3;
