@@ -2,9 +2,12 @@
 //This function only exists so i can easily use two confirm functions in a row
 //These are used for changing your e-mail and password.
 function return_confirm(confirm1, confirm2) {
+    //if return_confirm method recieves parameter confirm1 wich is true
     if (confirm(confirm1) === true) {
+        //return the second parameter named confirm2
         return confirm(confirm2);
     } else {
+        //if parameter1 is not true than return false.
         return false;
     }
 }
