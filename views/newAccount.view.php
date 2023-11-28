@@ -7,7 +7,7 @@ if (current_user() == null) {
     $_SESSION['loggedin'] = true;
 }
 if($_SESSION["loggedin"] == true) {
-    header("Location: /index.view.php");
+    header("Location: ../views/index.view.php");
     exit();
 }
 ?>

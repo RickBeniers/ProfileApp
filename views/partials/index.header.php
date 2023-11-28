@@ -4,7 +4,7 @@ echo '
     <head>
         <title></title>
         <meta>
-        <link rel="stylesheet" href="index.viewStyling.css?ver=3">
+        <link rel="stylesheet" href="../stylesheets/index.viewStyling.css?ver=3">
     </head>
     <body>
         <header>
@@ -17,9 +17,10 @@ echo '
                 <!-- The elements below are items of the flexbox named flex-container.-->
                 <!-- The elements are position using the flow-direction: colum.-->
                 <div class="pageButtons flex-container">
+
                     <!-- the buttons below(the two divs) are both surrounded by a tags, this means the entire button is clickable.-->
-                    <a href="index.view.php"><div class="button grid-item">Register</div></a>
-                    <a href="index.view.php"><div class="button grid-item">Login</div></a>
+                    <a href="../controllers/newAccount.php"><div class="button grid-item">Register</div></a>
+                    <a href="../controllers/login.php"><div class="button grid-item">Login</div></a>
                 </div>
             </div>
         </header>';

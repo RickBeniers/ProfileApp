@@ -1,6 +1,6 @@
 <?php
-include_once 'indexFunctions.php';
-include_once 'index.header.php';
+include_once '../functions/indexFunctions.php';
+include_once 'partials/index.header.php';
 echo '
 <main>
     <!-- Div below contains the list of profiles on the right and a more detailed overview of a profile on the left.-->
@@ -15,4 +15,4 @@ echo '
         </div>
     </div>
 </main>';
-include_once 'index.footer.php';
+include_once 'partials/index.footer.php';
